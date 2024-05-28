@@ -13,6 +13,7 @@ for i = 1:size(message)
 end
 test = encode(message, G_Sizes(2), G_Sizes(1), 'hamming/binary');
 matrix_encoded_message = matrix;
-disp(matrix_encoded_message(1,:))
-disp(test(1,:))
+%disp(matrix_encoded_message(1,:));
+%disp(test(1,:));
+isequal(test,matrix_encoded_message);
 

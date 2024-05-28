@@ -2,8 +2,8 @@ function matrix_corrected_message  = detection_correction_error(encoded_message,
 
 tsindrome = syndtable(H);
 %disp(tsindrome);
-matrix_size = size(encoded_message)
-matrix_corrected_message = zeros(matrix_size(1), matrix_size(2))
+matrix_size = size(encoded_message);
+matrix_corrected_message = zeros(matrix_size(1), matrix_size(2));
 for i = 1:matrix_size(1)
     sindrome = rem(encoded_message(i,:)*H',2);
     %disp(sindrome);
@@ -21,6 +21,6 @@ for i = 1:matrix_size(1)
     %disp(biterr(encoded_message(1,:), corrected_message));
     matrix_corrected_message(i,:) = corrected_message;
 end
-disp(biterr(encoded_message, matrix_corrected_message));
+% disp(['Quantidade de erros detectados: ' num2str(biterr(encoded_message, matrix_corrected_message))]);
 
 end
