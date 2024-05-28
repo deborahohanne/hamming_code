@@ -1,4 +1,4 @@
-function [ruido, coords] = criar_ruido(h, percentil)
+function [ruido, coords] = create_ruido(h, percentil)
 [tamx tamy] = size(h);
 vezes= round(tamx*tamy*percentil);
 %disp(['Quantidade de ruído: ' num2str(vezes) ]);

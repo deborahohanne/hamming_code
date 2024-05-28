@@ -81,7 +81,7 @@ for i = 1:length(file_list)
             for noise = 1:length(noises)
 
                 subtitle_text = ['Ordem de ' num2str(order) ' e Ruído de ' num2str(noises(noise)*100) '%'];
-                [noised, coords] = criar_ruido(encoded, noises(noise));
+                [noised, coords] = create_ruido(encoded, noises(noise));
                 sn1 = matrix2vector(noised,k,y);
                 rs1 = debinarization(sn1,tam,minimo);
                 % disp(['Min rs1: ' num2str(min(rs1)) ' Min original: ' num2str(min(dados))]);
